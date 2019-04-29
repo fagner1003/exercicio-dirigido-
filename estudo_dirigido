@@ -1,0 +1,87 @@
+print(10==10)
+print(2*4==24/3)
+print(15%4<19%6)
+print(2<5!=8==8)
+print(True or False)
+import math
+print(2**2==math.pow(2,2))
+print(False and((7/2)>3,5))
+print(math.ceil(2.5)==3)and(math.sqrt(9)==3)
+
+metros=1
+milimetros=1000
+
+print("valor convertido em milimetros:", metros*milimetros)
+
+
+dias = float(input("digite quantos dias:"))
+horas = float(input("digite quantas horas:"))
+minutos = float(input("digite quantos minutos:"))
+segundos = float(input("digite quantos segundos:"))
+
+print("total em segundos:",dias*24*60*60 + horas*60*60 + minutos*60 + segundos)
+
+
+salario = float(input("digite o valor do salario:"))
+porcentagem = int(input("porcentagem do aumento:"))
+
+novosalario = salario+(salario*porcentagem/100)
+
+print(novosalario)
+
+preço = float(input("digite o preço da mercadoria:"))
+desconto = float(input("digite o porcentual de desconto:"))
+valor_do_desconto = preço*desconto / 100
+a_pagar = preço - valor_do_desconto
+print("um desconto de %5.2f %% em uma mercadoria de R$ %7.2f" % ( desconto , preço))
+print("valor R$ %7.2F." % valor_do_desconto)
+print("o valor a paga e de R$ %7.2f" % a_pagar)
+
+print("calculo tempo de viagem de altomovel")
+
+dist = float(input("insira a distancia a ser percorrida:").replace(',', '.'))
+vel = float(input("insira a velocidade media:").replace(',', '.'))
+tempo = dist / vel
+min = (round(tempo % 1,2))
+min = (min * 60)
+print("o tempo esperado da viagem e de {:.0f} horas e {:.0f} minutos".format(tempo,min))
+celsius = int(input("informe aqui a temperatura em celsius"))
+fahrenheit = 9 * celsius / 5 + 32
+print("temperatura em Fahrenheit", fahrenheit)
+
+kmpercorrido = int(input(" informe a quantidade de km percorridos:"))
+
+dia = int(input("informe a quantidade de dias:"))
+print("total a pagar R$",(kmpercorrido*0.15+dias*60.00))
+
+quantidade = int(input("informe quantos cigarros a pessoa fuma por dia:"))
+anos = int(input("informe por quantos anos a pessoa fuma"))
+soma = quantidade*(anos*365)
+minutos = soma*10
+subtrai = (minutos/60)/24
+
+print(" a pessoa tem %.2f dias a menos de vida" %subtrai)
+
+
+import math
+
+area_pintada = int(input("qual o tamanho a ser pintado:"))
+litros_necessarios = (area_pintada/6)
+#questao a
+
+latas_necessarias = math.ceil(litros_necessarios/18)
+print("sera necessario",latas_necessarias,"latas")
+
+#questao b
+
+galoes_necessarios = math.ceil(litros_necessarios / 3.6)
+print("sera necessarios", galoes_necessarios,"galoes")
+
+#questao c
+
+latas_necessarias = int(litros_necessarios/18)
+faltou = litros_necessarios % 18
+galoes_necessarios = math.ceil(faltou / 3.6)
+
+print("foram necessarios", latas_necessarias,"latas")
+print("foram necessarios", galoes_necessarios,"galoes")
